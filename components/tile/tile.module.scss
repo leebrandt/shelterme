@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+.tile {
+  display: inline-block;
+  margin: 1rem;
+  border: solid .5rem #CCC;
+  border-radius: 1.5rem;
+  background-color: #FFF;
+  background-size: cover;
+  
+  span {
+    display: block;
+    position: relative;
+    border-radius: 1rem 1rem 0 0;
+    background-color:#CCC;
+    color: $base-color;
+    font-weight: bolder;
+    padding: 3px;
+    bottom: 0;
+  }
+}
