@@ -4,8 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import Tile from '../components/tile'
-import CTA from '../components/cta'
-import Layout, {siteTitle} from '../components/layout'
+import Layout from '../components/layout'
 import styles from '../styles/home.module.scss'
 
 const Home: NextPage = () => {
@@ -41,6 +40,7 @@ const Home: NextPage = () => {
           </div>
         </section>
         <div className="page">
+          <h1>We help shelter pets find their fur-ever home!</h1>
           <p>When you find yourself in the shelter, there is no reason to be scared. Shelter Me is an adoption and fostering matching site for dogs and cats. Shelter pets can find homes and fosters of their own. All for free!</p>
           <p>ShelterMe is a digital home for pets in need. We give shelter pets visibility and voice to help them find homes faster. Our online community brings people together who want to adopt or foster, but also those who want to give back by donating money or supplies, helping out at events, or even joining us for a foster vacation.</p>
           <p>ShelterMe is a collaborative effort between animal shelters, fosters, rescues and pet lovers who believe that every pet deserves a forever home. People can search for available pets on the website and email shelters for more information about any individual pet. Pet lovers support ShelterMe by donating to the shelter or fostering an animal in need.</p>
