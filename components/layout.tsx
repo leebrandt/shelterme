@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import styles from '../components/layout.module.scss'
 import About from '../pages/about'
 
@@ -18,6 +19,8 @@ export default function Layout({
 }) {
   return (
     <div>
+      <Script src={'https://kit.fontawesome.com/e7c1d72447.js'} />
+
       <Head>
         <title>{siteTitle}</title>
       </Head>

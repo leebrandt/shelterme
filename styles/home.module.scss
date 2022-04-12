@@ -1,6 +1,35 @@
+@import '../styles/variables.scss';
+
 .banner {
-  height: 45vh;
+  height: 600px;
   background-image: url('../public/images/greengrass4.jpeg');
   background-size: cover;
   border: dotted 1px #333;
+}
+
+.cta {
+  background-color: $base-color;
+  min-height: 4rem;
+  text-align: right;
+
+  .action {
+    padding: 1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+    background-color: $base-light;
+    border: dotted 1px #333;
+    border-radius: .5rem;
+    color: rgba(200, 200, 200, 0.7);
+    font-size: 1.5rem;
+    font-weight: bold ;
+    overflow: hidden;
+    text-align: right;
+    &:hover{
+      background-color: $base-highlight;
+    }
+    i{
+      font-size: 2.5rem;
+      color: rgba(200, 200, 200, 0.7)
+    }
+  }
 }

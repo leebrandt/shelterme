@@ -6,8 +6,8 @@ const Tile = ({
   backgroundImage,
   name
 }:{
-  height: number, 
-  width: number,
+  height: string | number, 
+  width: string | number,
   backgroundImage: string,
   name: string
 }) => {

@@ -1,11 +1,19 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+
 import Tile from '../components/tile'
+import CTA from '../components/cta'
 import Layout, {siteTitle} from '../components/layout'
 import styles from '../styles/home.module.scss'
 
 const Home: NextPage = () => {
+
+  function handleClick(event: any){
+    console.log(event.target.name);
+  }
+
   return (
     <Layout home>
       <section>
@@ -17,28 +25,26 @@ const Home: NextPage = () => {
           <Tile height={250} width={250} backgroundImage="/images/dogs/charisma.jpeg" name="Charisma"></Tile>
           <Tile height={250} width={250} backgroundImage="/images/dogs/bruce.jpeg" name="Bruce"></Tile>
           <Tile height={250} width={250} backgroundImage="/images/dogs/myrtle.jpeg" name="Myrtle"></Tile>
-          <Tile height={250} width={250} backgroundImage="/images/dogs/happy.jpeg" name="Happy"></Tile>
+          </div>
+        </section>
+        <section className={styles.cta}>
+          <div className="page">
+            <Link href="/adopt">
+              <a className={styles.action}><i className="fa-solid fa-paw"></i> Apply to Adopt</a>
+            </Link>
+            <Link href="/foster">
+              <a className={styles.action}><i className="fa-solid fa-person-shelter"></i> Apply to Foster</a>
+            </Link>
+            <Link href="/donate">
+              <a className={styles.action}><i className="fa-solid fa-piggy-bank"></i> Donate Now</a>
+            </Link>
           </div>
         </section>
         <div className="page">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam suscipit, arcu vitae tincidunt dictum, erat arcu eleifend lectus, non maximus lectus lorem sed mi. Morbi erat justo, varius ut lorem non, dictum ultrices sem. Morbi pulvinar felis a lorem pharetra bibendum. Cras urna turpis, sagittis vitae arcu ut, rhoncus placerat est. Curabitur finibus sagittis ipsum, nec vehicula ex scelerisque lobortis. Duis at pretium urna, eu rhoncus odio. Donec nec nisl tempor, lobortis risus et, pulvinar nibh. Proin varius elit at dolor mollis, at ullamcorper orci interdum.
-          </p>
-          <p>
-            Phasellus auctor massa ligula, ut ullamcorper ipsum auctor at. Nunc tincidunt, neque vitae ornare faucibus, erat nisi consectetur tortor, ullamcorper ultricies orci neque rhoncus justo. Duis porta pulvinar justo, quis semper quam facilisis quis. Proin dapibus leo justo, ut finibus odio finibus eu. Curabitur id justo nec nulla convallis viverra. Aliquam porttitor leo at leo laoreet maximus. Ut fringilla tempor nulla, nec egestas ante sollicitudin vitae. Quisque lobortis tempor leo. Sed vestibulum luctus ipsum, aliquet tempor eros pellentesque in. Phasellus nulla lorem, placerat sed ante at, ultricies aliquam odio. Integer condimentum diam sed luctus molestie. Nunc congue nunc at lectus ullamcorper, in efficitur nisi euismod. Integer magna lectus, volutpat eget tortor quis, pretium rutrum risus. Maecenas ornare, enim ut scelerisque sagittis, purus augue sagittis eros, nec scelerisque enim libero in neque. Integer et lorem nec lorem ornare sodales sed quis ligula. Praesent tincidunt laoreet augue, et dictum erat sodales et.
-          </p>
-          <p>
-            Etiam pretium euismod turpis, sed pellentesque metus mollis eu. Aliquam in dolor risus. Quisque pellentesque turpis dignissim, tincidunt ligula non, dapibus justo. Nullam in tortor quis turpis faucibus mollis nec molestie urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum efficitur risus, id gravida odio sollicitudin nec. Curabitur laoreet facilisis lectus, eu eleifend ante vulputate vitae. Curabitur sed iaculis quam. Suspendisse ornare vestibulum tellus vel pharetra. Duis vitae tincidunt ipsum. Aliquam vel tempor lorem. Ut efficitur felis magna. Mauris erat sapien, hendrerit vitae felis nec, porttitor pellentesque felis.
-          </p>
-          <p>
-            Vivamus ac euismod magna. Vestibulum eget ullamcorper eros. Ut efficitur ipsum a sollicitudin commodo. Duis mollis tellus at neque faucibus, ut mollis neque consectetur. Suspendisse potenti. Nulla et ante ut risus convallis ornare non at lorem. Phasellus at tincidunt metus. Duis hendrerit et augue et congue. Nullam egestas volutpat nulla a tempus. Duis ut aliquam nulla. Mauris sit amet ante eget mi malesuada egestas. Fusce euismod aliquam urna eu facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam erat mauris, cursus et consequat luctus, bibendum in diam. Etiam non odio congue, vehicula lectus eu, hendrerit nisi.
-          </p>
-          {/* <p>
-            Etiam pretium euismod turpis, sed pellentesque metus mollis eu. Aliquam in dolor risus. Quisque pellentesque turpis dignissim, tincidunt ligula non, dapibus justo. Nullam in tortor quis turpis faucibus mollis nec molestie urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum efficitur risus, id gravida odio sollicitudin nec. Curabitur laoreet facilisis lectus, eu eleifend ante vulputate vitae. Curabitur sed iaculis quam. Suspendisse ornare vestibulum tellus vel pharetra. Duis vitae tincidunt ipsum. Aliquam vel tempor lorem. Ut efficitur felis magna. Mauris erat sapien, hendrerit vitae felis nec, porttitor pellentesque felis.
-          </p>
-          <p>
-            Vivamus ac euismod magna. Vestibulum eget ullamcorper eros. Ut efficitur ipsum a sollicitudin commodo. Duis mollis tellus at neque faucibus, ut mollis neque consectetur. Suspendisse potenti. Nulla et ante ut risus convallis ornare non at lorem. Phasellus at tincidunt metus. Duis hendrerit et augue et congue. Nullam egestas volutpat nulla a tempus. Duis ut aliquam nulla. Mauris sit amet ante eget mi malesuada egestas. Fusce euismod aliquam urna eu facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam erat mauris, cursus et consequat luctus, bibendum in diam. Etiam non odio congue, vehicula lectus eu, hendrerit nisi.
-          </p> */}
+          <p>When you find yourself in the shelter, there is no reason to be scared. Shelter Me is an adoption and fostering matching site for dogs and cats. Shelter pets can find homes and fosters of their own. All for free!</p>
+          <p>ShelterMe is a digital home for pets in need. We give shelter pets visibility and voice to help them find homes faster. Our online community brings people together who want to adopt or foster, but also those who want to give back by donating money or supplies, helping out at events, or even joining us for a foster vacation.</p>
+          <p>ShelterMe is a collaborative effort between animal shelters, fosters, rescues and pet lovers who believe that every pet deserves a forever home. People can search for available pets on the website and email shelters for more information about any individual pet. Pet lovers support ShelterMe by donating to the shelter or fostering an animal in need.</p>
+          <p>If you love animals, and want to help find a home for a shelter pet, then this is the site for you. We can even schedule visits with potential adoptive parents. If it turns out you are unable to adopt, we can find someone who can. What have you got to lose? Check us out!</p>
         </div>
       </section>
     </Layout>

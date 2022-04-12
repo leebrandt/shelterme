@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.cta {
+  padding: 1rem;
+  margin: 0 1rem;
+
+  background-color: $base-light;
+  border: dotted 1px #333;
+  border-radius: .5rem;
+  color: rgba(200, 200, 200, 0.7);
+  font-size: 1.5rem;
+  font-weight: bold ;
+  overflow: hidden;
+  text-align: right;
+  &:hover{
+    background-color: $base-highlight;
+  }
+  i{
+    font-size: 2.5rem;
+    color: rgba(200, 200, 200, 0.7)
+  }
+}
