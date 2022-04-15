@@ -2,28 +2,35 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import useSWR from 'swr';
 
-import Tile from '../components/tile'
-import Layout from '../components/layout'
-import styles from '../styles/home.module.scss'
+import Tile from '@sm/components/tile'
+import Layout from '@sm/components/layout'
+import styles from '@sm/styles/home.module.scss'
+import { Pet } from 'types/pet.types';
+
 
 const Home: NextPage = () => {
 
   function handleClick(event: any){
     console.log(event.target.name);
   }
+  const fetcher = async (url:string) => await fetch(url).then((res) => res.json())
 
+  const { data, error } = useSWR('/api/pets', fetcher)
+
+  if(error){
+    console.error(error);
+  }
+  
   return (
     <Layout home>
       <section>
         <section className={styles.banner}>
           <div className="page">
-          <Tile height={250} width={250} backgroundImage="/images/dogs/chloe.jpeg" name="Chlöe"></Tile>
-          <Tile height={250} width={250} backgroundImage="/images/dogs/zack.jpeg" name="Zack"></Tile>
-          <Tile height={250} width={250} backgroundImage="/images/dogs/joey.jpeg" name="Joey"></Tile>
-          <Tile height={250} width={250} backgroundImage="/images/dogs/charisma.jpeg" name="Charisma"></Tile>
-          <Tile height={250} width={250} backgroundImage="/images/dogs/bruce.jpeg" name="Bruce"></Tile>
-          <Tile height={250} width={250} backgroundImage="/images/dogs/myrtle.jpeg" name="Myrtle"></Tile>
+            {data && data.map((pet:Pet) => (
+              <Tile key={pet.id} height={250} width={250} backgroundImage={`/images/dogs/${pet.name}.jpeg`} name={pet.name}></Tile>
+            ))}
           </div>
         </section>
         <section className={styles.cta}>

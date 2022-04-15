@@ -1,0 +1,252 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <div>
+    <header>
+      <section
+        class="head"
+      >
+        <a
+          href="/"
+        >
+          <span
+            style="box-sizing: border-box; display: inline-block; overflow: hidden; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative; max-width: 100%;"
+          >
+            <span
+              style="box-sizing: border-box; display: block; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; max-width: 100%;"
+            >
+              <img
+                alt=""
+                aria-hidden="true"
+                src="data:image/svg+xml,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20version=%271.1%27%20width=%27108%27%20height=%27108%27/%3e"
+                style="display: block; max-width: 100%; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px;"
+              />
+            </span>
+            <img
+              alt="logo"
+              class="logo"
+              data-nimg="intrinsic"
+              decoding="async"
+              src="/_next/image?url=%2Fimages%2Flogo.png&w=256&q=75"
+              srcset="/_next/image?url=%2Fimages%2Flogo.png&w=128&q=75 1x, /_next/image?url=%2Fimages%2Flogo.png&w=256&q=75 2x"
+              style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+            />
+          </span>
+        </a>
+        <div
+          class="ticker"
+        >
+          <h4>
+            For Adoption:
+          </h4>
+          <div>
+            <span
+              class="title"
+            >
+              Dogs:
+            </span>
+             
+            8
+          </div>
+          <div>
+            <span
+              class="title"
+            >
+              Cats:
+            </span>
+             
+            6
+          </div>
+        </div>
+        <div
+          class="ticker"
+        >
+          <h4>
+            For Foster:
+          </h4>
+          <div>
+            <span
+              class="title"
+            >
+              Dogs:
+            </span>
+             
+            8
+          </div>
+          <div>
+            <span
+              class="title"
+            >
+              Cats:
+            </span>
+             
+            6
+          </div>
+        </div>
+      </section>
+      <nav
+        class="menu"
+      >
+        <ul>
+          <li>
+            <a
+              href="/"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href="/about"
+            >
+              About Us
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <section
+          class="banner"
+        >
+          <div
+            class="page"
+          >
+            <div
+              class="tile"
+              style="height: 250px; width: 250px; background-image: url(/images/dogs/chloe.jpeg);"
+            >
+              <span>
+                Chlöe
+              </span>
+            </div>
+            <div
+              class="tile"
+              style="height: 250px; width: 250px; background-image: url(/images/dogs/zack.jpeg);"
+            >
+              <span>
+                Zack
+              </span>
+            </div>
+            <div
+              class="tile"
+              style="height: 250px; width: 250px; background-image: url(/images/dogs/joey.jpeg);"
+            >
+              <span>
+                Joey
+              </span>
+            </div>
+            <div
+              class="tile"
+              style="height: 250px; width: 250px; background-image: url(/images/dogs/charisma.jpeg);"
+            >
+              <span>
+                Charisma
+              </span>
+            </div>
+            <div
+              class="tile"
+              style="height: 250px; width: 250px; background-image: url(/images/dogs/bruce.jpeg);"
+            >
+              <span>
+                Bruce
+              </span>
+            </div>
+            <div
+              class="tile"
+              style="height: 250px; width: 250px; background-image: url(/images/dogs/myrtle.jpeg);"
+            >
+              <span>
+                Myrtle
+              </span>
+            </div>
+          </div>
+        </section>
+        <section
+          class="cta"
+        >
+          <div
+            class="page"
+          >
+            <a
+              class="action"
+              href="/adopt"
+            >
+              <i
+                class="fa-solid fa-paw"
+              />
+               Apply to Adopt
+            </a>
+            <a
+              class="action"
+              href="/foster"
+            >
+              <i
+                class="fa-solid fa-person-shelter"
+              />
+               Apply to Foster
+            </a>
+            <a
+              class="action"
+              href="/donate"
+            >
+              <i
+                class="fa-solid fa-piggy-bank"
+              />
+               Donate Now
+            </a>
+          </div>
+        </section>
+        <div
+          class="page"
+        >
+          <h1>
+            We help shelter pets find their fur-ever home!
+          </h1>
+          <p>
+            When you find yourself in the shelter, there is no reason to be scared. Shelter Me is an adoption and fostering matching site for dogs and cats. Shelter pets can find homes and fosters of their own. All for free!
+          </p>
+          <p>
+            ShelterMe is a digital home for pets in need. We give shelter pets visibility and voice to help them find homes faster. Our online community brings people together who want to adopt or foster, but also those who want to give back by donating money or supplies, helping out at events, or even joining us for a foster vacation.
+          </p>
+          <p>
+            ShelterMe is a collaborative effort between animal shelters, fosters, rescues and pet lovers who believe that every pet deserves a forever home. People can search for available pets on the website and email shelters for more information about any individual pet. Pet lovers support ShelterMe by donating to the shelter or fostering an animal in need.
+          </p>
+          <p>
+            If you love animals, and want to help find a home for a shelter pet, then this is the site for you. We can even schedule visits with potential adoptive parents. If it turns out you are unable to adopt, we can find someone who can. What have you got to lose? Check us out!
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <section
+          class="footmenu"
+        >
+          <h3>
+            Quick Links
+          </h3>
+          <ul>
+            <li>
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+              >
+                About Us
+              </a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+  </div>
+</div>
+`;
