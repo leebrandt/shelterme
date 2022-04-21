@@ -113,56 +113,7 @@ exports[`renders homepage unchanged 1`] = `
         >
           <div
             class="page"
-          >
-            <div
-              class="tile"
-              style="height: 250px; width: 250px; background-image: url(/images/dogs/chloe.jpeg);"
-            >
-              <span>
-                Chlöe
-              </span>
-            </div>
-            <div
-              class="tile"
-              style="height: 250px; width: 250px; background-image: url(/images/dogs/zack.jpeg);"
-            >
-              <span>
-                Zack
-              </span>
-            </div>
-            <div
-              class="tile"
-              style="height: 250px; width: 250px; background-image: url(/images/dogs/joey.jpeg);"
-            >
-              <span>
-                Joey
-              </span>
-            </div>
-            <div
-              class="tile"
-              style="height: 250px; width: 250px; background-image: url(/images/dogs/charisma.jpeg);"
-            >
-              <span>
-                Charisma
-              </span>
-            </div>
-            <div
-              class="tile"
-              style="height: 250px; width: 250px; background-image: url(/images/dogs/bruce.jpeg);"
-            >
-              <span>
-                Bruce
-              </span>
-            </div>
-            <div
-              class="tile"
-              style="height: 250px; width: 250px; background-image: url(/images/dogs/myrtle.jpeg);"
-            >
-              <span>
-                Myrtle
-              </span>
-            </div>
-          </div>
+          />
         </section>
         <section
           class="cta"

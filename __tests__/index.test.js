@@ -1,14 +1,40 @@
-import { render, screen } from '@testing-library/react'
-import Home from '../pages/index'
 import '@testing-library/jest-dom'
+import { render, screen, waitFor } from "@testing-library/react"
+import Home from '../pages/index'
+import { SWRConfig } from 'swr'
+
+import { rest } from 'msw'
+import { setupServer } from 'msw/node'
+
+const handlers = [
+  rest.get('/api/pets', (res, req, ctx) => {
+    return res(cts.json(
+      [{
+        id:1,
+        name: 'Chloe'
+      },{
+        id:2,
+        name: 'Bruce'
+      }]
+    ))
+  })
+]
+const server = setupServer(...handlers)
+
+beforeAll(() => server.listen())
+afterEach(() => server.resetHandlers())
+afterAll(() => server.close())
 
 describe('Home', () => {
-  beforeEach(()=>{
-    render(<Home />)
+  beforeEach(() => {
+    render(
+      <SWRConfig value={{ provider: () => new Map() }}>
+        <Home />
+      </SWRConfig>
+    )
   })
 
   it('renders a logo', () => {
-
     const logo = screen.getByRole('link', {
       name: "logo",
     })
@@ -29,7 +55,7 @@ describe('Home', () => {
       name: /adopt/i
     })
 
-    expect(adoptCta).toBeInTheDocument();
+    expect(adoptCta).toBeInTheDocument()
   })
 
   it('renders a call to foster', () => {
@@ -38,7 +64,7 @@ describe('Home', () => {
       name: /foster/i
     })
 
-    expect(fosterCta).toBeInTheDocument();
+    expect(fosterCta).toBeInTheDocument()
   })
 
   it('renders a call to adopt', () => {
@@ -47,7 +73,7 @@ describe('Home', () => {
       name: /donate/i
     })
 
-    expect(donateCta).toBeInTheDocument();
+    expect(donateCta).toBeInTheDocument()
   })
 
   it('renders home page copy', () => {
@@ -56,6 +82,6 @@ describe('Home', () => {
       name: "We help shelter pets find their fur-ever home!"
     })
 
-    expect(pageCopy).toBeInTheDocument();
+    expect(pageCopy).toBeInTheDocument()
   })
 })

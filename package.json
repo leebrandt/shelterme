@@ -10,6 +10,7 @@
     "test": "jest --watch"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "next": "12.1.4",
     "react": "18.0.0",
     "react-dom": "18.0.0",
@@ -26,6 +27,7 @@
     "eslint-config-next": "12.1.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^27.5.1",
+    "msw": "^0.39.2",
     "node-mocks-http": "^1.11.0",
     "sass": "^1.50.0",
     "typescript": "4.6.3"

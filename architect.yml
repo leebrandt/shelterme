@@ -1,0 +1,32 @@
+name: shelterme
+description: a demo project for React app development with nextjs
+keywords:
+  - nextjs
+  - react
+  - demo
+
+dependencies:
+  pets-api: latest 
+
+services:
+  app:
+    build:
+      context: ./
+      ${{ if architect.environment == 'local' }}:
+        args:
+          DEBUG: 'true'
+    environment:
+      PETS_URL: ${{ dependencies['pets-api'].interfaces.api.url }}
+    interfaces:
+      main: 3000
+    ${{ if architect.environment == 'local' }}:
+      command: npm run dev
+      volumes:
+        src:
+          host_path: ./
+          mount_path: /app/
+
+interfaces:
+  app:
+    url: ${{ services.app.interfaces.main.url }}
+    description: Exposes the webapp to outside consumers
