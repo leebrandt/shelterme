@@ -1,7 +1,6 @@
 import '@testing-library/jest-dom'
 import { render, screen, waitFor } from "@testing-library/react"
 import Home from '../pages/index'
-import { SWRConfig } from 'swr'
 
 import { rest } from 'msw'
 import { setupServer } from 'msw/node'
@@ -26,20 +25,18 @@ afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 
 describe('Home', () => {
-  beforeEach(() => {
-    render(
-      <SWRConfig value={{ provider: () => new Map() }}>
-        <Home />
-      </SWRConfig>
+  beforeEach(async () => {
+    await waitFor(() => 
+      render(<Home />)
     )
   })
 
   it('renders a logo', () => {
-    const logo = screen.getByRole('link', {
-      name: "logo",
-    })
+
+    const logo = screen.getByRole('link', { name: "logo"})
 
     expect(logo).toBeInTheDocument()
+
   })
 
   it('renders the banner', () => {

@@ -12,13 +12,8 @@ import { Pet } from 'types/pet.types';
 
 const Home: NextPage = () => {
 
-  function handleClick(event: any){
-    //console.log(event.target.name);
-  }
   const fetcher = async (url:string) => await fetch(url).then((res) => res.json())
   
-  console.log(process.env.PETS_URL)
-
   const { data, error } = useSWR('http://localhost:50001/pets', fetcher)
 
   // if(error){
